@@ -36,12 +36,15 @@ First let's try installing Apache Cassandra from the tarball. These steps are pa
         $ sudo curl https://downloads.apache.org/cassandra/KEYS | sudo apt-key add -
         $ sudo sudo apt-get install cassandra -y
 
-1. Now we'll start Cassandra (as a background process) and make sure it's running with `cqlsh`, the interactive CQL shell:
+1. Normally the service will start automatically (as a background process) and make sure it's running with `cqlsh`, the interactive CQL shell:
 
-        $ bin/cassandra
+        $ Verify that Cassandra is running by invoking nodetool status from the command line.
+                The default location of configuration files is /etc/cassandra.
+                The default location of log and data directories is /var/log/cassandra/ and /var/lib/cassandra.
+                Start-up options (heap size, etc) can be configured in /etc/default/cassandra.
         $ bin/cqlsh
         Connected to Test Cluster at localhost:9160.
-        [cqlsh 5.0.1 | Cassandra 3.0.19 | CQL spec 3.4.0 | Native protocol v4]
+        [cqlsh 5.0.1 | Cassandra 3.11.6 | CQL spec 3.4.4 | Native protocol v4]
         Use HELP for help.
         cqlsh>
 
