@@ -10,8 +10,8 @@
 # See the README for a walkthrough explaining Cassandra and DataStax installation.
 
 # Adjustable settings
-CFG_MEMSIZE = "1400"    # max memory for each VM
-CFG_TZ = "US/Pacific"   # timezone, like US/Pacific, US/Eastern, UTC, Europe/Warsaw, etc.
+CFG_MEMSIZE = "2048"    # max memory for each VM
+CFG_TZ = "US/Central"   # timezone, like US/Pacific, US/Eastern, UTC, Europe/Warsaw, etc.
 SERVER_COUNT = 4
 NETWORK = '10.211.55.'
 FIRST_IP = 110
