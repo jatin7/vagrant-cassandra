@@ -28,13 +28,13 @@ OpenJDK 64-Bit Server VM (build 25.242-b08, mixed mode)
 
 First let's try installing Apache Cassandra from the tarball. These steps are patterned after the Cassandra [Getting Started][gs] page.
 
-1. From the [Cassandra project site][dl] find the current 3.0 release tarball download link
+1. From the [Cassandra project site][dl] find the current install steps steps 
 1. Click the link to find a suitable mirror link and copy it
-1. From inside the VM, download and expand:
+1. From inside the VM, run following commands:
 
-        $ wget https://www-us.apache.org/dist/cassandra/3.0.19/apache-cassandra-3.0.19-bin.tar.gz
-        $ tar xvzf apache-cassandra-*-bin.tar.gz
-        $ cd apache-cassandra-*
+        $ sudo echo "deb https://downloads.apache.org/cassandra/debian 311x main" | sudo tee -a /etc/apt/sources.list.d/cassandra.sources.list
+        $ sudo curl https://downloads.apache.org/cassandra/KEYS | sudo apt-key add -
+        $ sudo sudo apt-get install cassandra -y
 
 1. Now we'll start Cassandra (as a background process) and make sure it's running with `cqlsh`, the interactive CQL shell:
 
